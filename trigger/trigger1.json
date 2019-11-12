@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "storage to storage",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/datamove/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/82bccf10-936d-4a60-b10c-2c55701fc490/resourceGroups/EventRG/providers/Microsoft.Storage/storageAccounts/eventstoragetest",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
